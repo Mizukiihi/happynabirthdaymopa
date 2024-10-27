@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background and Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: url(2ded3b2278ee6bca80fe2f01e7a527ac.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Main Wrapper */
+        .wrapper {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Text Styling */
+        .wrapper h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .wrapper .message {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styling */
+        .wrapper button {
+            background-color: #ff7e5f;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .wrapper button:hover {
+            background-color: #feb47b;
+        }
+
+        /* Modal Styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.4s ease, visibility 0.4s;
+        }
+
+        .modal.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .cake {
+            width: 100%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <h1>Happy Birthday, My Love!!!</h1>
+        <p class="message">Wishing you a day filled with joy, love, and laughter!!(missyousosomuchbtw)</p>
+        <button onclick="showModal()">Open Your Gift 🎁</button>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src=c519f388a9a20d4706318103b68a0892.jpg alt="Happy Birthday Cake!(gojo cake btw)" class="cake">
+            <p>Hope this year is as amazing as you are!</p>
+        </div>
+    </div>
+
+    <script>
+        // Show Modal Function
+        function showModal() {
+            document.getElementById('modal').classList.add('show');
+        }
+
+        // Close Modal Function
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
+        }
+
+        // Close Modal When Clicking Outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
